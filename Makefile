@@ -34,7 +34,8 @@ python_install:
 		pip install -r requirements.txt
 
 python_test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+	# Set PYTHONPATH and run tests with coverage for main.py and mylib.py
+	PYTHONPATH=. python -m pytest -vv --cov=main --cov=mylib test_*.py
 
 python_format:	
 	black *.py 
