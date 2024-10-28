@@ -1,0 +1,10 @@
+[package]
+name = "sizhe_chen_mini_project_8"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+csv = "1.1"               
+serde = { version = "1.0", features = ["derive"] }  
+sys-info = "0.9.1"         
+tempfile = "3.3" 
