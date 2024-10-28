@@ -21,7 +21,8 @@ def test_log_to_md_not_empty(tmpdir, sample_data):
     memory_used = 2048     # Non-zero memory used
 
     
-    log_to_md(sample_data, output_data, elapsed_time, memory_used, filename=str(log_file))
+    log_to_md(sample_data, output_data, elapsed_time, 
+              memory_used, filename=str(log_file))
 
     
     with open(log_file, "r") as file:

@@ -3,8 +3,8 @@ import time
 import psutil
 import os
 
-def log_to_md(input_data, output_data, elapsed_time, memory_used, filename="python_times.md"):
-    """Logs input, output, elapsed time, and memory used to a specified Markdown file."""
+def log_to_md(input_data, output_data, elapsed_time, 
+              memory_used, filename="python_times.md"):
     with open(filename, "w") as file:
         file.write("### Candy Data Processing\n")
         file.write(f"#### Input Data:\n```\n{input_data}\n```\n\n")
@@ -23,7 +23,6 @@ def main():
     data = pd.read_csv(input_file)
     input_data = data
 
-    # Example processing: Group by 'competitorname' and calculate the mean of 'sugarpercent'
     processed_data = data.groupby("competitorname")["sugarpercent"].mean()
     output_data = processed_data  # Preview of output data
 
